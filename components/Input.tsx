@@ -1,36 +1,25 @@
-import React, { useCallback } from "react";
+import * as React from "react";
 
-const textarea: React.CSSProperties = {
-  resize: "none",
-  lineHeight: 1.7,
-  display: "block",
-  width: "100%",
-  borderRadius: "var(--geist-border-radius)",
-  backgroundColor: "var(--background)",
-  padding: "var(--geist-half-pad)",
-  color: "var(--foreground)",
-  fontSize: 14,
-};
+import { cn } from "../lib/utils";
 
-export const Input: React.FC<{
-  text: string;
-  setText: React.Dispatch<React.SetStateAction<string>>;
-  disabled?: boolean;
-}> = ({ text, setText, disabled }) => {
-  const onChange: React.ChangeEventHandler<HTMLInputElement> = useCallback(
-    (e) => {
-      setText(e.currentTarget.value);
-    },
-    [setText]
-  );
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-  return (
-    <input
-      disabled={disabled}
-      name="title"
-      style={textarea}
-      value={text}
-      onChange={onChange}
-    />
-  );
-};
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ className, type, ...props }, ref) => {
+    return (
+      <input
+        type={type}
+        className={cn(
+          "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Input.displayName = "Input";
+
+export { Input };
