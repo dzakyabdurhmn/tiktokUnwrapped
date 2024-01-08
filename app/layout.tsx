@@ -1,9 +1,9 @@
-import "../styles/global.css";
+import "./global.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Remotion and Next.js",
-  description: "Remotion and Next.js",
+  title: "TikTok Unwrapped",
+  description: "TikTok Unwrapped 2024",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
