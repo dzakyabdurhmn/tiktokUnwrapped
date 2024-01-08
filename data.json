@@ -1,0 +1,54 @@
+{
+  "name": "John Doe",
+  "videoAmountWatched": 81737,
+  "watchSessions": {
+    "totalSessions": 1823,
+    "totalWatchTimeSec": 60 * 60 * 24 * 29,
+    "averageSessionLengthSec": 60 * 120,
+    "longestWatchSession": {
+      "startTime": "2021-01-01T00:00:00.000Z",
+      "endTime": "2021-01-01T01:00:00.000Z",
+      "lengthSec": 60 * 60 * 5
+    },
+    "earliestVideoWatched": "2021-01-01T00:00:00.000Z",
+    "latestVideoWatched": "2024-01-08T00:00:00.000Z",
+    "mostActiveWeekday": {
+      "weekday": "Monday",
+      "averageUsageTime": 60 * 60 * 4
+    }
+  },
+  "comments": {
+    "totalComments": 712,
+    "avgCommentLength": 29,
+    "mostUsedEmoji": {
+      "emoji": "😂",
+      "count": 521
+    }
+  },
+  "likes": {
+    "totalLikes": 8237,
+    "dayWithMostLikedPosts": {
+      "day": "2021-01-01",
+      "count": 92
+    },
+    "firstLikedVideo": {
+      "date": "2021-01-01T00:00:00.000Z",
+      "link": "https://www.tiktok.com/@tiktok/video/123456789"
+    }
+  },
+  "shares": {
+    "totalShares": 293,
+    "dayWithMostSharedPosts": {
+      "day": "2021-01-01",
+      "count": 12
+    },
+    "firstSharedVideo": {
+      "date": "2021-01-01T00:00:00.000Z",
+      "link": "https://www.tiktok.com/@tiktok/video/123456789"
+    }
+  },
+  "live": {
+    "totalLiveComments": 121,
+    "totalLiveViewed": 823
+  }
+}
