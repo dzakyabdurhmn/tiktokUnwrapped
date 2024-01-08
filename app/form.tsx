@@ -17,7 +17,13 @@ import * as z from "zod";
 import { Section } from "../components/section-heading";
 import { Icons } from "../components/icon";
 const formSchema = z.object({
-  username: z.string().min(2).max(24).startsWith("@"),
+  username: z
+    .string()
+    .min(2, {
+      message: "username minimal 2 karakter",
+    })
+    .max(24, { message: "username maksimal 24 karakter" })
+    .startsWith("@", { message: "username wajib di awali dengan @" }),
 });
 
 export function ProfileForm() {
