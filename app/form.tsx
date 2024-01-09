@@ -19,11 +19,11 @@ import { Icons } from "../components/icon";
 const formSchema = z.object({
   username: z
     .string()
-    .min(2, {
-      message: "username minimal 2 karakter",
-    })
+    .trim() // Menghilangkan spasi di awal dan akhir
+    .min(2, { message: "username minimal 2 karakter" })
     .max(24, { message: "username maksimal 24 karakter" })
-    .startsWith("@", { message: "username wajib di awali dengan @" }),
+    .startsWith("@", { message: "username wajib di awali dengan @" })
+    .regex(/^\S+$/, { message: "username tidak boleh mengandung spasi" }),
 });
 
 export function ProfileForm() {
@@ -64,7 +64,7 @@ export function ProfileForm() {
                   <FormControl>
                     <Input
                       className="rounded-[6px] min-w-[300px]"
-                      placeholder="shadcn"
+                      placeholder="username"
                       {...field}
                     />
                   </FormControl>
