@@ -1,10 +1,11 @@
+"use client";
 import { Composition } from "remotion";
 import { MyComposition, myCompSchema } from "./Composition";
-import "./style.css";
-
+// import "./style.css";
 export const RemotionRoot: React.FC = () => {
   return (
-    <>
+    <div>
+      {/* @ts-ignore */}
       <Composition
         id="MyComp"
         component={MyComposition}
@@ -19,6 +20,6 @@ export const RemotionRoot: React.FC = () => {
           logoColor: "#00bfff",
         }}
       />
-    </>
+    </div>
   );
 };
