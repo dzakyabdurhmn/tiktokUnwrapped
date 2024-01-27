@@ -59,7 +59,7 @@ export const Main = (props: Props) => {
       </Sequence>
       <Sequence from={transitionStart + transitionDuration / 2}>
         <TextFade>
-          <h1 style={titleStyle}>{props.title}</h1>
+          <h1 style={titleStyle}></h1>
         </TextFade>
       </Sequence>
     </AbsoluteFill>

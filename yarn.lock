@@ -5931,6 +5931,11 @@ regexp.prototype.flags@^1.5.0, regexp.prototype.flags@^1.5.1:
     define-properties "^1.2.0"
     set-function-name "^2.0.0"
 
+remotion-animated@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remotion-animated/-/remotion-animated-2.0.0.tgz#305a75ad7f16c0d607c9ae3ee537e3590f58ce12"
+  integrity sha512-OBrDAxRUvzpuuTaMmAO2L7aVU7KSpfHF5yENEq/oghdjsWYi+Af5E+IAulaMeShJqa+6NkD6KliL7WjYD4ZGeg==
+
 remotion@4.0.84, remotion@^4.0.77:
   version "4.0.84"
   resolved "https://registry.npmjs.org/remotion/-/remotion-4.0.84.tgz"
